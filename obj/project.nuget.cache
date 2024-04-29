@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3GY+jnWxNrxQomQoKZtA+RKDEzaieY9SxxvdXxfWe6Op0m0aOr9gk+VztU7q7H3iDqyP1wnXPXNDfm2ORUNajw==",
+  "success": true,
+  "projectFilePath": "/Users/yashveekotadiya/Desktop/EmployeePaylayout/EmployeePaylayout.csproj",
+  "expectedPackageFiles": [
+    "/Users/yashveekotadiya/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/yashveekotadiya/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/yashveekotadiya/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

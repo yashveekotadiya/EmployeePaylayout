@@ -1,0 +1,38 @@
+@using EmployeeCrud.Models
+@model List<Employee>
+<h2>List Of Employee</h2>
+
+<p style="margin-block: 22px;">
+    <a class="add-btn" asp-controller="Employee" asp-action="AddEmployee">Add EmployeeData</a>
+</p>
+
+<table id="studentTable" class="table table-striped">    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee HireDate</th>
+            <th>Employee Gender</th>
+            <th>Employee Salary</th>
+            <th>Employee Designation</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.c_id</td>
+                <td>@employee.c_employeename</td>
+                <td>@employee.c_hiredate.ToString("yyyy-MM-dd")</td>
+                <td>@employee.c_gender</td>
+                <td>@employee.c_salary</td>
+                <td>@employee.c_designationid</td>
+                <td class="action-buttons">
+                    <a class="details-btn" asp-controller="Employee" asp-action="PayRoll" asp-route-id="@employee.c_id">Pay Roll</a>
+                    <a class="edit-btn" asp-action="Edit" asp-controller="Employee"asp-route-id="@employee.c_id">Edit</a>
+                    <a class="delete-btn"  asp-controller="Employee" asp-action="Delete" asp-route-id="@employee.c_id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

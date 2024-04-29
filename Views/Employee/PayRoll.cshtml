@@ -1,0 +1,41 @@
+@using EmployeeCrud.Models
+@model Employee
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Designation</th>
+            <th>Gross Salary</th>
+            <th>Basic</th>
+            <th>DA</th>
+            <th>HRA</th>
+            <th>Tax</th>
+            <th>Taxable Salary</th>
+            <th>TakeHomePay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.c_id</td>
+            <td>@Model.c_employeename</td>
+            <td>@Model.c_hiredate.ToString("yyyy-MM-dd")</td>
+            <td>@Model.c_gender</td>
+            <td>@Model.c_designationid</td>
+            <td>@Model.c_salary</td>
+            <td>@Model.Basic</td>
+            <td>@Model.DA</td>
+            <td>@Model.HRA</td>
+            <td>@Model.Tax</td>
+            <td>@Model.Taxable</td>
+            <td>@Model.TakeHomePay</td>
+        </tr>
+    </tbody>
+</table>
+
+   <a class="details-btn" asp-controller="Employee" asp-action="Index" >Index</a>
+
+   <a asp-action="Edit" asp-controller="Employee" asp-route-id="@Model.c_id">Edit</a>

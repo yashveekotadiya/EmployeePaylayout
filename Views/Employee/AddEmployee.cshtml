@@ -1,0 +1,68 @@
+@model EmployeeCrud.Models.Employee
+
+<div class="form-container">
+    <h2>Employee Data</h2>
+
+    <form asp-action="AddEmployee" method="post">
+        <div class="form-group">
+            <label asp-for="c_employeename"></label>
+            <input asp-for="c_employeename" class="form-control" />
+             <span asp-validation-for="c_employeename" class="text-danger"></span>
+            
+        </div>
+
+        <div class="form-group">
+            <label asp-for="c_hiredate"></label>
+            <input asp-for="c_hiredate" class="form-control" type="date" />
+             <span asp-validation-for="c_hiredate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="c_gender"></label>
+            <input type="radio" asp-for="c_gender" value="Male" /> Male
+            <input type="radio" asp-for="c_gender" value="Female" /> Female
+            <input type="radio" asp-for="c_gender" value="Other" /> Other
+             <span asp-validation-for="c_gender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="c_salary">Salary</label>
+            <input asp-for="c_salary" type="number" class="form-control" id="c_salary" name="c_salary">
+             <span asp-validation-for="c_salary" class="text-danger"></span>
+        </div>
+
+        @* <div class="form-group">
+        <div>
+            <label>Designation</label>
+            <select class="form-control" id="c_designation" name="c_designation" asp-for="@Model.c_designationid">
+                <option value="">Select Designation</option>
+            </select>
+        </div>
+    </div> *@
+
+
+
+     <div class="form-group">
+            <label asp-for="c_designationid">Courses</label>
+            <select asp-for="c_designationid" class="form-control">
+                <option value="">Select Course</option>
+                <option value="1">Manager</option>
+                <option value="2">Supervisor</option>
+                <option value="3">Developer</option>
+                <option value="4">Designer</option>
+                <option value="5">Administrator</option>
+            </select>
+            <span asp-validation-for="c_designationid" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Employee</button>
+    </form>
+</div>
+
+
+@* <environment include="Development">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"></script>
+</environment> *@
+
